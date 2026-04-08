@@ -19,8 +19,8 @@ export default function WorkerDetails({
       </h1>
 
       <p className="text-lg text-gray-600">
-        Welcome to the {worker.title} unit. More content goes here...
-      </p>
+  {worker.description}
+</p>
     </div>
   );
 }
