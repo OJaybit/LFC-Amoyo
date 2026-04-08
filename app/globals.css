@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground:#ffffff;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #5c6f87;
+  border-radius: 10px;
+}
+
+
+/* ================= SHINE EFFECT ================= */
+
+.shine-wrapper {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.group:hover .shine-wrapper {
+  opacity: 1;
+}
+
+.shine {
+  position: absolute;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: rgba(220, 220, 220, 0.95);
+  animation: none;
+}
+
+.group:hover .shine {
+  animation: shine 1s ease-in-out forwards;
+}
+
+@keyframes shine {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(30%); }
+  100% { transform: translateY(120%); }
+}
+
+
+
+/* Bounce uses translateY ONLY */
+@keyframes whatsapp-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes whatsapp-glow {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ================= PAGE BASE ================= */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= SCROLL TO TOP ================= */
+
+.scroll-progress {
+  position: fixed;
+  inset: auto;
+  bottom: 24px;
+  right: 24px;
+
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: conic-gradient(#5c6f87 0%, #e6e6e6 0%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+
+  z-index: 9999;
+  will-change: transform;
+  backface-visibility: hidden;
+
+  transition: opacity 0.3s ease;
+}
+
+.scroll-progress.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Inner circle */
+.scroll-icon {
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5c6f87;
+}
+
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn.prev { left: 0; }
+.nav-btn.next { right: 0; }
+
+.nav-btn:hover {
+  background: #5c6f87;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .testimonials-slider { padding: 0 20px; }
+  .nav-btn { display: none; }
+}
+
+/* ================= VIDEO ================= */
+
+video {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* ================= SWIPER ================= */
+
+.popular-destinations-slider .swiper-pagination {
+  bottom: 0;
+}
+
+.popular-destinations-slider .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #0A3D40;
+  background: transparent;
+  opacity: 1;
+  margin: 0 6px !important;
+}
+
+.popular-destinations-slider .swiper-pagination-bullet-active {
+  background: #E9D09A;
+  border-color: #E9D09A;
+}
+
+
+
+/* Completely remove Google banner */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+/* Remove Google tooltip */
+.goog-tooltip {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.notranslate {
+  translate: no;
+}
+
+.skiptranslate {
+  display: none !important;
+}
