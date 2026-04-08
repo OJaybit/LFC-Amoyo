@@ -10,8 +10,6 @@ import { motion, Variants } from 'framer-motion';
 import { pacifico } from '@/app/fonts';
 import { pastors } from '../data/pastors';
 
-import 'swiper/css';
-
 /* ================= SAFE ANIMATION ================= */
 const container: Variants = {
   hidden: {},

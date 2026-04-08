@@ -151,7 +151,7 @@ export default function Navbar() {
               {/* IMAGE */}
               <div className="hidden lg:flex items-center justify-center p-10">
                 <Image
-                  src="/menu-image.jpg"
+                  src="/images/pastors/pastors1.jpg"
                   alt="Event"
                   width={450}
                   height={280}
