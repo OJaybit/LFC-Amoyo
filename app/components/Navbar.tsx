@@ -140,8 +140,8 @@ export default function Navbar() {
             {/* TOP LINKS */}
             <div className="absolute top-5 right-16 hidden lg:flex gap-6 text-xs tracking-widest z-50">
               <Link href="/about">ABOUT</Link>
-              <Link href="/atlanta">ATLANTA</Link>
-              <Link href="/washington">WASHINGTON DC</Link>
+              <Link href="#">Lfc worldwide</Link>
+              <Link href="/ourpastors">Our Leaders</Link>
               <Link href="/give">GIVE</Link>
             </div>
 {/* CONTENT */}
@@ -191,10 +191,10 @@ export default function Navbar() {
       <div>
         <h3 className="text-white/60 mb-3 text-xs">Locations</h3>
         <ul className="space-y-2 text-sm">
-          <li><Link href="/amoyo">Amoyo</Link></li>
-          <li><Link href="/ilorin">Ilorin</Link></li>
-          <li><Link href="/dc">DC</Link></li>
-          <li><Link href="/atlanta">Atlanta</Link></li>
+          <li><Link href="#">Amoyo</Link></li>
+          <li><Link href="#">Ilorin</Link></li>
+          <li><Link href="#">Kwara</Link></li>
+          <li><Link href="#">Nigeria</Link></li>
         </ul>
       </div>
 
@@ -249,12 +249,19 @@ export default function Navbar() {
   </div>
 
   {/* SOCIAL */}
-  <div className="flex gap-4 mt-10 text-white/70 text-sm">
-    <span>YouTube</span>
-    <span>Instagram</span>
-    <span>Facebook</span>
-  </div>
 
+<div className="flex gap-4 mt-10 text-white/70 text-sm">
+  <Link href="https://t.me/livingfaithamoyo" target="_blank" className="hover:text-white transition">
+    Telegram
+  </Link>
+
+  <Link href="https://www.facebook.com/livingfaithamoyo" target="_blank" className="hover:text-white transition">
+    Instagram
+  </Link>
+
+  <Link href="https://facebook.com/Lfcamoyo" target="_blank" className="hover:text-white transition">
+    Facebook
+  </Link>
 </div>
           </motion.div>
         )}
