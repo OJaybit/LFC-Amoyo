@@ -256,16 +256,14 @@ export default function Navbar() {
   </Link>
 
   <Link href="https://www.facebook.com/livingfaithamoyo" target="_blank" className="hover:text-white transition">
-    Instagram
+    Facebook
   </Link>
 
   <Link href="https://facebook.com/Lfcamoyo" target="_blank" className="hover:text-white transition">
-    Facebook
-  </Link>
-</div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-  );
-}
+          Instagram
+        </Link>
+      </div>
+
+    </motion.div>
+  )}
+</AnimatePresence>
