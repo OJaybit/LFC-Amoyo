@@ -234,36 +234,48 @@ export default function Navbar() {
         </ul>
       </div>
 
-      <div>
-        <h3 className="text-white/60 mb-3">Movement</h3>
-        <ul className="space-y-2">
-          <li><Link href="/conferences">Conferences</Link></li>
-          <li><Link href="/records">Records</Link></li>
-          <li><Link href="/equip">Equip</Link></li>
-          <li><Link href="/publishing">Publishing</Link></li>
-          <li><Link href="/resources">Resources</Link></li>
-        </ul>
-      </div>
+      {/* Movement Section */}
+<div>
+  <h3 className="text-white/60 mb-3">Movement</h3>
+  <ul className="space-y-2">
+    <li><Link href="/conferences">Conferences</Link></li>
+    <li><Link href="/records">Records</Link></li>
+    <li><Link href="/equip">Equip</Link></li>
+    <li><Link href="/publishing">Publishing</Link></li>
+    <li><Link href="/resources">Resources</Link></li>
+  </ul>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 
-  {/* SOCIAL */}
-
+{/* SOCIAL */}
 <div className="flex gap-4 mt-10 text-white/70 text-sm">
-  <Link href="https://t.me/livingfaithamoyo" target="_blank" className="hover:text-white transition">
+  <Link
+    href="https://t.me/livingfaithamoyo"
+    target="_blank"
+    className="hover:text-white transition"
+  >
     Telegram
   </Link>
 
-  <Link href="https://www.facebook.com/livingfaithamoyo" target="_blank" className="hover:text-white transition">
+  <Link
+    href="https://www.facebook.com/livingfaithamoyo"
+    target="_blank"
+    className="hover:text-white transition"
+  >
     Facebook
   </Link>
 
-  <Link href="https://facebook.com/Lfcamoyo" target="_blank" className="hover:text-white transition">
-          Instagram
-        </Link>
-      </div>
+  <Link
+    href="https://instagram.com/lfcamoyo"
+    target="_blank"
+    className="hover:text-white transition"
+  >
+    Instagram
+  </Link>
+</div>
 
-    </motion.div>
-  )}
+</motion.div>
+)}
 </AnimatePresence>
