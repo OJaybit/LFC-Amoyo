@@ -80,7 +80,7 @@ export default function Navbar() {
         </div>
 
         {/* RIGHT */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center -mt-2 gap-3">
           <div id="google_translate_element" />
 
           <button
@@ -144,79 +144,118 @@ export default function Navbar() {
               <Link href="/washington">WASHINGTON DC</Link>
               <Link href="/give">GIVE</Link>
             </div>
+{/* CONTENT */}
+<div className="relative z-40 flex flex-col lg:grid lg:grid-cols-2 h-full px-6 lg:px-16 pb-16 justify-center">
 
-            {/* CONTENT */}
-            <div className="relative z-40 grid lg:grid-cols-2 h-full">
-              
-              {/* IMAGE */}
-              <div className="hidden lg:flex items-center justify-center p-10">
-                <Image
-                  src="/images/pastors/pastors1.jpg"
-                  alt="Event"
-                  width={450}
-                  height={280}
-                  className="rounded-lg object-cover"
-                />
-              </div>
+  {/* TITLE (mobile + desktop) */}
+  <div className="mb-6 lg:mb-0">
+    <h1 className="text-2xl lg:text-3xl font-semibold mb-2">
+      LFC Amoyo
+    </h1>
 
-              {/* RIGHT */}
-              <div className="flex flex-col justify-center px-6 lg:px-16 pb-16">
-                
-                <h1 className="text-2xl lg:text-3xl font-semibold mb-2">
-                  LFC Amoyo
-                </h1>
+    <p className="text-sm text-white/70">
+      For God. For People. For the City. For the World.
+    </p>
+  </div>
 
-                <p className="text-sm text-white/70 mb-6">
-                  For God. For People. For the City. For the World.
-                </p>
+  {/* 🔥 MOBILE TWO-SECTIONS LAYOUT */}
+  <div className="grid grid-cols-2 gap-6 lg:hidden mt-8">
 
-                <div className="border-t border-white/20 mb-8" />
+    {/* LEFT SECTION */}
+    <div className="space-y-6">
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
-                  
-                  {/* COLUMN 1 */}
-                  <div>
-                    <h3 className="text-white/60 mb-3">Our House</h3>
-                    <ul className="space-y-2">
-                      <li><Link href="/story">AboutUs</Link></li>
-                      <li><Link href="/beliefs">Mission statements</Link></li>
-                      <li><Link href="/leadership">Our Leadership</Link></li>
-                      <li><Link href="/careers">Join Our Workers</Link></li>
-                    </ul>
-                  </div>
+      <div>
+        <h3 className="text-white/60 mb-3 text-xs">Our House</h3>
+        <ul className="space-y-2 text-sm">
+          <li><Link href="/story">About Us</Link></li>
+          <li><Link href="/beliefs">Mission Statements</Link></li>
+          <li><Link href="/leadership">Leadership</Link></li>
+          <li><Link href="/careers">Join Workers</Link></li>
+        </ul>
+      </div>
 
-                  {/* COLUMN 2 */}
-                  <div>
-                    <h3 className="text-white/60 mb-3">Locations</h3>
-                    <ul className="space-y-2">
-                      <li><Link href="/515">opposite</Link></li>
-                      <li><Link href="/cumberland">Complex</Link></li>
-                      <li><Link href="/trilith">Amoyo</Link></li>
-                      <li><Link href="/dc">Ilorin, kwara</Link></li>
-                    </ul>
-                  </div>
+      <div>
+        <h3 className="text-white/60 mb-3 text-xs">Movement</h3>
+        <ul className="space-y-2 text-sm">
+          <li><Link href="/conferences">Conferences</Link></li>
+          <li><Link href="/records">Records</Link></li>
+          <li><Link href="/equip">Equip</Link></li>
+        </ul>
+      </div>
 
-                  {/* COLUMN 3 */}
-                  <div>
-                    <h3 className="text-white/60 mb-3">Movement</h3>
-                    <ul className="space-y-2">
-                      <li><Link href="/conferences">Conferences</Link></li>
-                      <li><Link href="/records">Records</Link></li>
-                      <li><Link href="/equip">Equip</Link></li>
-                      <li><Link href="/publishing">Publishing</Link></li>
-                      <li><Link href="/resources">Resources</Link></li>
-                    </ul>
-                  </div>
-                </div>
+    </div>
 
-                {/* SOCIAL */}
-                <div className="flex gap-4 mt-8 text-white/70 text-sm">
-                  <span>YouTube</span>
-                  <span>Instagram</span>
-                  <span>Facebook</span>
-                </div>
-              </div>
-            </div>
+    {/* RIGHT SECTION */}
+    <div className="space-y-6">
+
+      <div>
+        <h3 className="text-white/60 mb-3 text-xs">Locations</h3>
+        <ul className="space-y-2 text-sm">
+          <li><Link href="/amoyo">Amoyo</Link></li>
+          <li><Link href="/ilorin">Ilorin</Link></li>
+          <li><Link href="/dc">DC</Link></li>
+          <li><Link href="/atlanta">Atlanta</Link></li>
+        </ul>
+      </div>
+
+      {/* QUICK INFO CARD */}
+      <div className="p-3 border border-white/10 rounded-lg bg-white/5">
+        <p className="text-xs text-white/60">
+          Join us every Sunday for worship and word.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  {/* DESKTOP (UNCHANGED - KEEP YOUR ORIGINAL) */}
+  <div className="hidden lg:block">
+    <div className="border-t border-white/20 mb-8 mt-6" />
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+
+      <div>
+        <h3 className="text-white/60 mb-3">Our House</h3>
+        <ul className="space-y-2">
+          <li><Link href="/story">AboutUs</Link></li>
+          <li><Link href="/beliefs">Mission statements</Link></li>
+          <li><Link href="/leadership">Our Leadership</Link></li>
+          <li><Link href="/careers">Join Our Workers</Link></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 className="text-white/60 mb-3">Locations</h3>
+        <ul className="space-y-2">
+          <li><Link href="/515">Opposite</Link></li>
+          <li><Link href="/cumberland">Complex</Link></li>
+          <li><Link href="/trilith">Amoyo</Link></li>
+          <li><Link href="/dc">Ilorin, Kwara</Link></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 className="text-white/60 mb-3">Movement</h3>
+        <ul className="space-y-2">
+          <li><Link href="/conferences">Conferences</Link></li>
+          <li><Link href="/records">Records</Link></li>
+          <li><Link href="/equip">Equip</Link></li>
+          <li><Link href="/publishing">Publishing</Link></li>
+          <li><Link href="/resources">Resources</Link></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  {/* SOCIAL */}
+  <div className="flex gap-4 mt-10 text-white/70 text-sm">
+    <span>YouTube</span>
+    <span>Instagram</span>
+    <span>Facebook</span>
+  </div>
+
+</div>
           </motion.div>
         )}
       </AnimatePresence>
