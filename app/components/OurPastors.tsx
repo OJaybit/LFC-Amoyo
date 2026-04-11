@@ -112,39 +112,7 @@ export default function PopularDestinationsSlider() {
                     </h3>
                   </Link>
 
-                  <Link href={`/pastors/${tour.slug}`}>
-                    <button className="px-6 py-2 rounded-lg bg-[#5c6f87] text-white text-sm hover:bg-black transition">
-                      {('subtitle' in tour && tour.subtitle)
-                        ? tour.subtitle
-                        : 'Pastors Post'}
-                    </button>
-                  </Link>
-                </div>
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        {/* ================= CUSTOM DOTS ================= */}
-        <div className="mt-8 flex justify-center gap-3">
-          {pastors.slice(0, 8).map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => swiperRef.current?.slideToLoop(idx)}
-              className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                idx === currentIndex
-                  ? 'bg-[#5c6f87] scale-125'
-                  : 'border border-[#2a4b4b] opacity-60'
-              }`}
-            />
-          ))}
-        </div>
-      </motion.div>
-
-    </section>
-  );
-              ))}
-        </Swiper>
+           
 
         {/* MOBILE DOTS */}
         <div className="mt-6 flex justify-center gap-3">
@@ -171,7 +139,37 @@ export default function PopularDestinationsSlider() {
           loop
           autoplay={{ delay: 3500, disableOnInteraction: false }}
           onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSwiper={(swiper) => (swiperRef.current = <Link href={`/pastors/${tour.slug}`}>
+  <button className="px-6 py-2 rounded-lg bg-[#5c6f87] text-white text-sm hover:bg-black transition">
+    {'subtitle' in tour && tour.subtitle
+      ? tour.subtitle
+      : 'Pastors Post'}
+  </button>
+</Link>
+</div>
+</motion.div>
+</SwiperSlide>
+))}   
+</Swiper>
+
+{/* ================= CUSTOM DOTS ================= */}
+<div className="mt-8 flex justify-center gap-3">
+  {pastors.slice(0, 8).map((_, idx) => (
+    <button
+      key={idx}
+      onClick={() => swiperRef.current?.slideToLoop(idx)}
+      className={`h-3 w-3 rounded-full transition-all duration-300 ${
+        idx === currentIndex
+          ? 'bg-[#5c6f87] scale-125'
+          : 'border border-[#2a4b4b] opacity-60'
+      }`}
+    />
+  ))}
+</div>
+</motion.div>
+
+</section>
+);swiper)}
           className="mt-10"
         >
           {pastors.slice(0, 8).map((tour, index) => (
