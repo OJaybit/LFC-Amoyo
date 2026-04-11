@@ -143,7 +143,7 @@ export default function PopularDestinationsSlider() {
 
     </section>
   );
-              }          ))}
+              ))}
         </Swiper>
 
         {/* MOBILE DOTS */}
