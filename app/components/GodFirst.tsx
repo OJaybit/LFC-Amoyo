@@ -54,7 +54,7 @@ export default function AboutUs() {
           <p className="text-gray-600 leading-relaxed text-base sm:text-lg max-w-xl">
             Everything we do is about worshiping Him, walking with Christ
             and alongside others, and sharing His love so lives are changed
-            for eternity in Kwara and around the world.
+            for eternity in Amoyo, Ilorin, Kwara and around the world.
           </p>
 
           {/* BUTTON */}
