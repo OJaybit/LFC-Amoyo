@@ -78,57 +78,7 @@ export default function PopularDestinationsSlider() {
         >
           {pastors.slice(0, 8).map((tour, index) => (
             <SwiperSlide key={index}>
-              <motion.div
-                variants={item}
-                className="group max-w-md mx-auto bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm flex flex-col
-                hover:-translate-y-3 hover:shadow-xl transition-all duration-500"
-              >
-                {/* IMAGE */}
-                <div className="relative w-full h-[260px] overflow-hidden">
-                  <Image
-                    src={tour.heroImage}
-                    alt={tour.cardTitle || tour.title || "Pastor image"}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                  />
-
-                  {/* SHINE EFFECT */}
-                  <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                    <div className="
-                      absolute inset-0
-                      bg-gradient-to-b from-transparent via-white/25 to-transparent
-                      translate-y-[-100%]
-                      group-hover:translate-y-[100%]
-                      transition-transform duration-1000 ease-out
-                    " />
-                  </div>
-                </div>
-
-                {/* CONTENT */}
-                <div className="p-6 flex flex-col items-center text-center gap-4">
-                  <Link href={`/pastors/${tour.slug}`}>
-                    <h3 className="text-xl font-semibold text-[#2f3b4a] hover:text-[#5c6f87] transition">
-                      {tour.cardTitle || tour.title}
-                    </h3>
-                  </Link>
-
-           
-
-        {/* MOBILE DOTS */}
-        <div className="mt-6 flex justify-center gap-3">
-          {pastors.slice(0, 4).map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => swiperRef.current?.slideToLoop(idx)}
-              className={`h-3 w-3 rounded-full transition ${
-                idx === currentIndex
-                  ? 'bg-[#5c6f87]'
-                  : 'border border-[#2a4b4b]'
-              }`}
-            />
-          ))}
-        </div>
-      </motion.div>
+              
 
       {/* ================= DESKTOP SWIPER ================= */}
       <div className="hidden lg:block">
@@ -153,7 +103,49 @@ export default function PopularDestinationsSlider() {
 </Swiper>
 
 {/* ================= CUSTOM DOTS ================= */}
-<div className="mt-8 flex justify-center gap-3">
+<div className="mt-8 flex just<motion.div
+  variants={item}
+  className="group max-w-md mx-auto bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm flex flex-col
+  hover:-translate-y-3 hover:shadow-xl transition-all duration-500"
+>
+  {/* IMAGE */}
+  <div className="relative w-full h-[260px] overflow-hidden">
+    <Image
+      src={tour.heroImage}
+      alt={tour.cardTitle || tour.title || "Pastor image"}
+      fill
+      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+    />
+
+    {/* SHINE EFFECT */}
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="
+        absolute inset-0
+        bg-gradient-to-b from-transparent via-white/25 to-transparent
+        translate-y-[-100%]
+        group-hover:translate-y-[100%]
+        transition-transform duration-1000 ease-out
+      " />
+    </div>
+  </div>
+
+  {/* CONTENT */}
+  <div className="p-6 flex flex-col items-center text-center gap-4">
+    <Link href={`/pastors/${tour.slug}`}>
+      <h3 className="text-xl font-semibold text-[#2f3b4a] hover:text-[#5c6f87] transition">
+        {tour.cardTitle || tour.title}
+      </h3>
+    </Link>
+
+    <Link href={`/pastors/${tour.slug}`}>
+      <button className="px-6 py-2 rounded-lg bg-[#5c6f87] text-white text-sm hover:bg-black transition">
+        {'subtitle' in tour && tour.subtitle
+          ? tour.subtitle
+          : 'Pastors Post'}
+      </button>
+    </Link>
+  </div>
+</motion.div>ify-center gap-3">
   {pastors.slice(0, 8).map((_, idx) => (
     <button
       key={idx}
